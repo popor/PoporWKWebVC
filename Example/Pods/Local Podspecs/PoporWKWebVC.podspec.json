@@ -1,0 +1,30 @@
+{
+  "name": "PoporWKWebVC",
+  "version": "0.1.0",
+  "summary": "A short description of PoporWKWebVC.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/wangkq/PoporWKWebVC",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "wangkq": "908891024@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/wangkq/PoporWKWebVC.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "PoporWKWebVC/Classes/**/*",
+  "dependencies": {
+    "PoporPopNC": [
+
+    ],
+    "PoporUI/IToast": [
+
+    ]
+  }
+}
