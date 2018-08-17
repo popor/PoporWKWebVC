@@ -8,9 +8,8 @@
 
 #import "PoporWKWebVCViewController.h"
 
-//#import <PoporWKWebVC/PoporWKWebVC.h>
-
 #import "PoporWKWebVC.h"
+
 @interface PoporWKWebVCViewController ()
 
 @end
@@ -55,6 +54,7 @@
     [oneL setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
     oneL.numberOfLines =0;
     oneL.text               = @"1: Only support iPhone, Not simulator!\n2: UINavigationController must be PoporPopNC!";
+    
     
 }
 

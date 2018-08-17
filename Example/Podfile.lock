@@ -3,9 +3,9 @@ PODS:
   - PoporFoundation/NSString (0.0.15):
     - PoporFoundation/PrefixOs
   - PoporFoundation/PrefixOs (0.0.15)
-  - PoporPopNC (0.0.3):
+  - PoporPopNC (0.0.4):
     - PoporFoundation/NSObject
-  - PoporUI/IToast (0.0.8):
+  - PoporUI/IToast (0.0.10):
     - PoporFoundation/NSString
   - PoporWKWebVC (0.1.0):
     - PoporPopNC
@@ -26,8 +26,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   PoporFoundation: 0293bddbd32f0c12b80c6149105e2804ae79b16c
-  PoporPopNC: f58f37831f32ff26ed86687ec027d350050d795b
-  PoporUI: 09366ba0d18b7099d7b3a37aaf7cac84a4954980
+  PoporPopNC: fa8558254e3925081d8660970034f3c6cef6a308
+  PoporUI: b3d14b238a880ff286317b88ec1cce221863f415
   PoporWKWebVC: 0f42bdd7739f207d2e0700cf0a569d4fae90cc13
 
 PODFILE CHECKSUM: 248b5d8ff0cf407967031fd08ded3d74a37b5af1
