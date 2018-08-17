@@ -11,16 +11,6 @@ Pod::Spec.new do |s|
   s.version          = '0.0.1'
   s.summary          = '使用UIWKWebView,支持左右边缘侧滑实现网页的前进后退;点击导航栏返回按钮实现网页内部返回,增加了关闭按钮,类似微信查看网页方式.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
   s.homepage         = 'https://github.com/popor/PoporWKWebVC'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'wangkq' => '908891024@qq.com' }
