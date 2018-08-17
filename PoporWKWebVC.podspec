@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/wangkq/PoporWKWebVC'
+  s.homepage         = 'https://github.com/popor/PoporWKWebVC'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'wangkq' => '908891024@qq.com' }
   s.source           = { :git => 'https://github.com/popor/PoporWKWebVC.git', :tag => s.version.to_s }
