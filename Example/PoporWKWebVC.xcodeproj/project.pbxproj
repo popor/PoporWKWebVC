@@ -60,7 +60,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71B29915E7F25C5EF5EA8267 /* Pods_PoporWKWebVC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporWKWebVC_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B96D121FC2B250318C112580 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C291E190B9E9C86A0E01E40E /* Pods-PoporWKWebVC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporWKWebVC_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoporWKWebVC_Example/Pods-PoporWKWebVC_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C8884CA9916A38C2A55095C7 /* Pods_PoporWKWebVC_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporWKWebVC_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +95,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18573BFB21266B96000CDA93 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				6003F59C195388D20070C39A /* PoporWKWebVCAppDelegate.h */,
+				6003F59D195388D20070C39A /* PoporWKWebVCAppDelegate.m */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				6003F594195388D20070C39A /* Supporting Files */,
+			);
+			name = other;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -132,14 +145,9 @@
 		6003F593195388D20070C39A /* Example for PoporWKWebVC */ = {
 			isa = PBXGroup;
 			children = (
-				6003F59C195388D20070C39A /* PoporWKWebVCAppDelegate.h */,
-				6003F59D195388D20070C39A /* PoporWKWebVCAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				18573BFB21266B96000CDA93 /* other */,
 				6003F5A5195388D20070C39A /* PoporWKWebVCViewController.h */,
 				6003F5A6195388D20070C39A /* PoporWKWebVCViewController.m */,
-				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
-				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for PoporWKWebVC";
 			path = PoporWKWebVC;

@@ -104,12 +104,12 @@
 }
 
 #pragma mark - PoporNC 返回判断
-- (BOOL)shouldHoldBackButtonEvent {
+- (BOOL)shouldHoldPopEvent {
     NSLog(@"%s", __func__);
     return YES;
 }
 
-- (BOOL)canPopViewController {
+- (BOOL)canPopViewControllerByButton {
     NSLog(@"%s",  __func__);
     if ([self.infoWV canGoBack]) {
         [self.infoWV goBack];
