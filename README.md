@@ -12,7 +12,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ```
 1:使用UIWKWebView,支持左右边缘侧滑实现网页的前进后退;
 2:点击导航栏返回按钮实现网页内部返回,增加了关闭按钮,类似微信查看网页方式;
-3:依赖于PoporPopNC才可以实现点击导航栏返回按钮事件;
+
+暂停
+1:依赖于PoporPopNC才可以实现点击导航栏返回按钮事件;(怀疑有问题)
 
 
 ```

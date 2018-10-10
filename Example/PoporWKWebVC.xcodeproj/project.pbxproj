@@ -329,22 +329,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PoporWKWebVC_Example/Pods-PoporWKWebVC_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PoporWKWebVC_Example/Pods-PoporWKWebVC_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PoporFoundation/PoporFoundation.framework",
-				"${BUILT_PRODUCTS_DIR}/PoporPopNC/PoporPopNC.framework",
 				"${BUILT_PRODUCTS_DIR}/PoporUI/PoporUI.framework",
 				"${BUILT_PRODUCTS_DIR}/PoporWKWebVC/PoporWKWebVC.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PoporFoundation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PoporPopNC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PoporUI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PoporWKWebVC.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoporWKWebVC_Example/Pods-PoporWKWebVC_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PoporWKWebVC_Example/Pods-PoporWKWebVC_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4BE5B480E5A13BB7266180A0 /* [CP] Check Pods Manifest.lock */ = {

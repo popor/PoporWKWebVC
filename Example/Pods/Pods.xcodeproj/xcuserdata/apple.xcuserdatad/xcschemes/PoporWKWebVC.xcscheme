@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "59F9D0726D4630CD13681BC57EBC172F"
+               BlueprintIdentifier = "AA0B9D36FF1C973A6036391D763C72D7"
                BlueprintName = "PoporWKWebVC"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "PoporWKWebVC.framework">
