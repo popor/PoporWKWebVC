@@ -21,6 +21,8 @@
 	
     self.title = @"PoporWKWebVC";
     
+    self.navigationController.navigationBar.translucent = YES;
+    
     UIButton * oneBT = ({
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame =  CGRectMake((self.view.frame.size.width - 80)/2, 80, 80, 44);
@@ -59,7 +61,8 @@
 }
 
 - (void)btAction {
-    PoporWKWebVC * vc = [[PoporWKWebVC alloc] initWithTitle:@"" url:@"https://www.163.com"];
+    //PoporWKWebVC * vc = [[PoporWKWebVC alloc] initWithTitle:@"" url:@"https://www.qq.com"];
+    PoporWKWebVC * vc = [[PoporWKWebVC alloc] initWithTitle:@"" url:@"https://cn.bing.com"];
     {
         UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
         backItem.title = @"返回";

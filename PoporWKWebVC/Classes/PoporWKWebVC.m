@@ -71,8 +71,21 @@
         self.infoWV.allowsBackForwardNavigationGestures = YES;
         
         [self.view addSubview:self.infoWV];
+        if (self.navigationController) {
+            CGRect StatusRect = [[UIApplication sharedApplication] statusBarFrame];//标题栏
+            CGRect NavRect    = self.navigationController.navigationBar.frame;//然后将高度相加，便可以动态计算顶部高度。
+            CGFloat height    = StatusRect.size.height + NavRect.size.height;
+            
+            if (self.navigationController.navigationBar.translucent) {
+                self.infoWV.frame = CGRectMake(0, height, self.view.frame.size.width, self.view.frame.size.height - height);
+            }else{
+                self.infoWV.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - height);
+            }
+        }else{
+            self.infoWV.frame = self.view.bounds;
+        }
         
-        self.infoWV.frame = self.view.bounds;
+        
         if (@available(iOS 11, *)) {
             self.infoWV.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }

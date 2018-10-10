@@ -4,7 +4,7 @@ PODS:
   - PoporFoundation/PrefixOs (0.0.15)
   - PoporUI/IToast (0.0.10):
     - PoporFoundation/NSString
-  - PoporWKWebVC (0.0.2):
+  - PoporWKWebVC (0.0.3):
     - PoporUI/IToast
 
 DEPENDENCIES:
@@ -22,7 +22,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   PoporFoundation: 0293bddbd32f0c12b80c6149105e2804ae79b16c
   PoporUI: b3d14b238a880ff286317b88ec1cce221863f415
-  PoporWKWebVC: d7f3f05e734314aa997e280e537603d2ea7adccf
+  PoporWKWebVC: c18d0375ce3766de4050cd986e69b74eb7a42e08
 
 PODFILE CHECKSUM: 248b5d8ff0cf407967031fd08ded3d74a37b5af1
 
