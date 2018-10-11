@@ -2,7 +2,9 @@ use_frameworks!
 
 target 'PoporWKWebVC_Example' do
   pod 'PoporWKWebVC', :path => '../'
-
+  
+  pod 'PoporPopNormalNC'
+  
   target 'PoporWKWebVC_Tests' do
     inherit! :search_paths
 

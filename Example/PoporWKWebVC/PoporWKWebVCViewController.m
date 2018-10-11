@@ -55,14 +55,13 @@
     //label.preferredMaxLayoutWidth = 100;
     [oneL setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
     oneL.numberOfLines =0;
-    oneL.text               = @"1: Only support iPhone, Not simulator!\n2: UINavigationController must be PoporPopNC!";
-    
+    oneL.text = @"1: Only support iPhone, Not simulator!\n2: UINavigationController must be PoporPopNC!";
     
 }
 
 - (void)btAction {
-    //PoporWKWebVC * vc = [[PoporWKWebVC alloc] initWithTitle:@"" url:@"https://www.qq.com"];
-    PoporWKWebVC * vc = [[PoporWKWebVC alloc] initWithTitle:@"" url:@"https://cn.bing.com"];
+    PoporWKWebVC * vc = [[PoporWKWebVC alloc] initWithTitle:@"" url:@"https://www.qq.com"];
+    //PoporWKWebVC * vc = [[PoporWKWebVC alloc] initWithTitle:@"" url:@"https://cn.bing.com"];
     {
         UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
         backItem.title = @"返回";

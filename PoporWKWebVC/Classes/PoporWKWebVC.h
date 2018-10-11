@@ -16,7 +16,6 @@
 @property (nonatomic, strong) NSString  * firstUrl;
 @property (nonatomic, strong) WKWebView * infoWV;
 @property (nonatomic, copy  ) void (^viewDidLoadBlock)(PoporWKWebVC *webVC);
-@property (nonatomic, strong) NSString * closeTitle;
 
 - (id)initWithTitle:(NSString *)title url:(NSString *)url;
 

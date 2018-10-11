@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PoporWKWebVC'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = '使用UIWKWebView,支持左右边缘侧滑实现网页的前进后退;点击导航栏返回按钮实现网页内部返回,增加了关闭按钮,类似微信查看网页方式.'
 
   s.homepage         = 'https://github.com/popor/PoporWKWebVC'

@@ -1,18 +1,29 @@
 PODS:
-  - PoporFoundation/NSString (0.0.15):
+  - PoporFoundation/NSObject (0.0.25)
+  - PoporFoundation/NSString (0.0.25):
     - PoporFoundation/PrefixOs
-  - PoporFoundation/PrefixOs (0.0.15)
-  - PoporUI/IToast (0.0.10):
+  - PoporFoundation/PrefixCore (0.0.25):
+    - PoporFoundation/PrefixOs
+  - PoporFoundation/PrefixOs (0.0.25)
+  - PoporPopNormalNC (0.0.2):
+    - PoporUI/UIViewController
+  - PoporUI/IToast (0.0.18):
     - PoporFoundation/NSString
-  - PoporWKWebVC (0.0.3):
+  - PoporUI/UIViewController (0.0.18):
+    - PoporFoundation/NSObject
+    - PoporFoundation/NSString
+    - PoporFoundation/PrefixCore
+  - PoporWKWebVC (0.0.4):
     - PoporUI/IToast
 
 DEPENDENCIES:
+  - PoporPopNormalNC
   - PoporWKWebVC (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - PoporFoundation
+    - PoporPopNormalNC
     - PoporUI
 
 EXTERNAL SOURCES:
@@ -20,10 +31,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PoporFoundation: 0293bddbd32f0c12b80c6149105e2804ae79b16c
-  PoporUI: b3d14b238a880ff286317b88ec1cce221863f415
-  PoporWKWebVC: c18d0375ce3766de4050cd986e69b74eb7a42e08
+  PoporFoundation: bca1071cd750888f2dac9e5f5bb0857d4f76e92b
+  PoporPopNormalNC: 873f569b89fb60d891e4bc42aea9218e562a9638
+  PoporUI: e6a89da106f51c6ab18310b52fc926de9ec9527f
+  PoporWKWebVC: 3598edc8d6d7791a9ab11ba813baeeb8d06d637f
 
-PODFILE CHECKSUM: 248b5d8ff0cf407967031fd08ded3d74a37b5af1
+PODFILE CHECKSUM: 5c9b7fe2b55d12316e5e0d34b2b7ba08b4da4162
 
 COCOAPODS: 1.6.0.beta.1
