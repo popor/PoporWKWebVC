@@ -161,12 +161,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PoporFoundation/PoporFoundation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PoporPopNormalNC/PoporPopNormalNC.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PoporUI/PoporUI.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PoporWKWebVC/PoporWKWebVC.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PoporFoundation/PoporFoundation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PoporPopNormalNC/PoporPopNormalNC.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PoporUI/PoporUI.framework"

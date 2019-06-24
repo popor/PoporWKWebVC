@@ -1,27 +1,15 @@
 //
 //  PoporWKWebVC.h
-//  PoporWKWebVC
+//  Pods
 //
-//  Created by popor on 2018/6/19.
-//  Copyright © 2018年 popor. All rights reserved.
-//
+//  Created by apple on 2019/6/24.
+//  
 
 #import <UIKit/UIKit.h>
+#import "PoporWKWebVCProtocol.h"
 
-@class WKWebView;
-@class PoporWKWebVC;
+@interface PoporWKWebVC : UIViewController <PoporWKWebVCProtocol>
 
-@interface PoporWKWebVC : UIViewController
-
-@property (nonatomic, strong) NSString  * firstUrl;
-@property (nonatomic, strong) NSMutableURLRequest * firstRequest;
-
-@property (nonatomic, strong) WKWebView * infoWV;
-@property (nonatomic, copy  ) void (^viewDidLoadBlock)(PoporWKWebVC *webVC);
-
-- (id)initWithTitle:(NSString *)title url:(NSString *)url;
-- (id)initWithTitle:(NSString *)title request:(NSMutableURLRequest *)request;
-
+- (instancetype)initWithDic:(NSDictionary *)dic;
 
 @end
-

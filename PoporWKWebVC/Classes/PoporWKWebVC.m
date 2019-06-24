@@ -1,48 +1,81 @@
 //
 //  PoporWKWebVC.m
-//  PoporWKWebVC
+//  Pods
 //
-//  Created by popor on 2018/6/19.
-//  Copyright © 2018年 popor. All rights reserved.
-//
+//  Created by apple on 2019/6/24.
+//  
 
 #import "PoporWKWebVC.h"
+#import "PoporWKWebVCPresenter.h"
 
 #import <WebKit/WebKit.h>
 #import <PoporUI/IToastKeyboard.h>
+#import <Masonry/Masonry.h>
 
-@interface PoporWKWebVC ()<WKUIDelegate, WKNavigationDelegate>
+@interface PoporWKWebVC () <WKUIDelegate, WKNavigationDelegate>
+
+@property (nonatomic, strong) PoporWKWebVCPresenter * present;
 
 @end
 
 @implementation PoporWKWebVC
+@synthesize infoWV;
+@synthesize rootUrl;
+@synthesize rootRequest;
+@synthesize viewDidLoadBlock;
 
-- (id)initWithTitle:(NSString *)title url:(NSString *)url; {
-    if (self = [super init]) {
-        self.title    = title;
-        self.firstUrl = url;
-    }
-    return self;
-}
 
-- (id)initWithTitle:(NSString *)title request:(NSMutableURLRequest *)request {
+- (instancetype)initWithDic:(NSDictionary *)dic {
     if (self = [super init]) {
-        self.title        = title;
-        self.firstRequest = request;
+        if (dic) {
+            self.title = dic[@"title"];
+            self.rootUrl         = dic[@"rootUrl"];
+            self.rootRequest     = dic[@"rootRequest"];
+            self.viewDidLoadBlock = dic[@"viewDidLoadBlock"];
+        }
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // if (!self.title) {
+    //     self.title = @"PoporWKWebVC";
+    // }
     
     self.view.backgroundColor = [UIColor lightGrayColor];
     
-    [self addWebView];
+    if (!self.present) {
+        PoporWKWebVCPresenter * present = [PoporWKWebVCPresenter new];
+        self.present = present;
+        [present setMyView:self];
+    }
+    
+    [self addViews];
     
     if(self.viewDidLoadBlock){
         self.viewDidLoadBlock(self);
     }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // 参考: https://www.jianshu.com/p/c244f5930fdf
+    if (self.isViewLoaded && !self.view.window) {
+        // self.view = nil;//当再次进入此视图中时能够重新调用viewDidLoad方法
+        
+    }
+}
+
+#pragma mark - VCProtocol
+- (UIViewController *)vc {
+    return self;
+}
+
+#pragma mark - views
+- (void)addViews {
+    [self addWebView];
+    
 }
 
 - (void)addWebView {
@@ -52,29 +85,22 @@
         self.infoWV.allowsBackForwardNavigationGestures = YES;
         
         [self.view addSubview:self.infoWV];
-        if (self.navigationController) {
-            CGRect StatusRect = [[UIApplication sharedApplication] statusBarFrame];//标题栏
-            CGRect NavRect    = self.navigationController.navigationBar.frame;//然后将高度相加，便可以动态计算顶部高度。
-            CGFloat height    = StatusRect.size.height + NavRect.size.height;
-            
-            if (self.navigationController.navigationBar.translucent) {
-                self.infoWV.frame = CGRectMake(0, height, self.view.frame.size.width, self.view.frame.size.height - height);
-            }else{
-                self.infoWV.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - height);
-            }
-        }else{
-            self.infoWV.frame = self.view.bounds;
-        }
-        
-        
+        [self.infoWV mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(0);
+            make.left.mas_equalTo(0);
+            make.bottom.mas_equalTo(0);
+            make.right.mas_equalTo(0);
+        }];
         if (@available(iOS 11, *)) {
-            self.infoWV.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+            self.infoWV.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAlways;
+        }else{
+            self.edgesForExtendedLayout = UIRectEdgeNone;
         }
         
-        if (self.firstRequest) {
-            [self.infoWV loadRequest:self.firstRequest];
+        if (self.rootRequest) {
+            [self.infoWV loadRequest:self.rootRequest];
         }else{
-            NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.firstUrl]];
+            NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.rootUrl]];
             [self.infoWV loadRequest:request];
         }
     }
@@ -100,4 +126,3 @@
 }
 
 @end
-
