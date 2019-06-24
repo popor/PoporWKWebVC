@@ -14,10 +14,14 @@
 @interface PoporWKWebVC : UIViewController
 
 @property (nonatomic, strong) NSString  * firstUrl;
+@property (nonatomic, strong) NSMutableURLRequest * firstRequest;
+
 @property (nonatomic, strong) WKWebView * infoWV;
 @property (nonatomic, copy  ) void (^viewDidLoadBlock)(PoporWKWebVC *webVC);
 
 - (id)initWithTitle:(NSString *)title url:(NSString *)url;
+- (id)initWithTitle:(NSString *)title request:(NSMutableURLRequest *)request;
+
 
 @end
 

@@ -19,8 +19,16 @@
 
 - (id)initWithTitle:(NSString *)title url:(NSString *)url; {
     if (self = [super init]) {
-        self.title      = title;
-        self.firstUrl   = url;
+        self.title    = title;
+        self.firstUrl = url;
+    }
+    return self;
+}
+
+- (id)initWithTitle:(NSString *)title request:(NSMutableURLRequest *)request {
+    if (self = [super init]) {
+        self.title        = title;
+        self.firstRequest = request;
     }
     return self;
 }
@@ -62,8 +70,13 @@
         if (@available(iOS 11, *)) {
             self.infoWV.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
-        NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.firstUrl]];
-        [self.infoWV loadRequest:request];
+        
+        if (self.firstRequest) {
+            [self.infoWV loadRequest:self.firstRequest];
+        }else{
+            NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.firstUrl]];
+            [self.infoWV loadRequest:request];
+        }
     }
 }
 

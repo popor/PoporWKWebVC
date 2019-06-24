@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "136FC43B23DBE08123D16DFD84465258"
+               BlueprintIdentifier = "7E7B411DF16F9042F4857121F7727B9A"
+               BuildableName = "PoporWKWebVC.framework"
                BlueprintName = "PoporWKWebVC"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "PoporWKWebVC.framework">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
