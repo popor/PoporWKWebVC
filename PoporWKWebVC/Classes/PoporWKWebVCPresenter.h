@@ -11,8 +11,8 @@
 // 处理和View事件
 @interface PoporWKWebVCPresenter : NSObject <PoporWKWebVCEventHandler, PoporWKWebVCDataSource>
 
-// 一般由present初始化使用或者继承使用.
-- (void)initInteractors;
+// 初始化数据处理
+- (void)setMyInteractor:(id)interactor;
 
 // 很多操作,需要在设置了view之后才可以执行.
 - (void)setMyView:(id)view;

@@ -7,6 +7,7 @@
 
 #import "PoporWKWebVC.h"
 #import "PoporWKWebVCPresenter.h"
+#import "PoporWKWebVCInteractor.h"
 
 #import <WebKit/WebKit.h>
 #import <PoporUI/IToastKeyboard.h>
@@ -38,24 +39,10 @@
 }
 
 - (void)viewDidLoad {
+    [self assembleViper];
     [super viewDidLoad];
-    // if (!self.title) {
-    //     self.title = @"PoporWKWebVC";
-    // }
     
     self.view.backgroundColor = [UIColor lightGrayColor];
-    
-    if (!self.present) {
-        PoporWKWebVCPresenter * present = [PoporWKWebVCPresenter new];
-        self.present = present;
-        [present setMyView:self];
-    }
-    
-    [self addViews];
-    
-    if(self.viewDidLoadBlock){
-        self.viewDidLoadBlock(self);
-    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,9 +60,25 @@
 }
 
 #pragma mark - views
+- (void)assembleViper {
+    if (!self.present) {
+        PoporWKWebVCPresenter * present = [PoporWKWebVCPresenter new];
+        PoporWKWebVCInteractor * interactor = [PoporWKWebVCInteractor new];
+        
+        self.present = present;
+        [present setMyInteractor:interactor];
+        [present setMyView:self];
+        
+        [self addViews];
+    }
+}
+
 - (void)addViews {
     [self addWebView];
     
+    if(self.viewDidLoadBlock){
+        self.viewDidLoadBlock(self);
+    }
 }
 
 - (void)addWebView {
