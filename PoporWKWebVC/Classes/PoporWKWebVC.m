@@ -10,7 +10,7 @@
 #import "PoporWKWebVCInteractor.h"
 
 #import <WebKit/WebKit.h>
-#import <PoporUI/IToastKeyboard.h>
+#import <PoporUI/IToastPTool.h>
 #import <Masonry/Masonry.h>
 
 @interface PoporWKWebVC () <WKUIDelegate, WKNavigationDelegate>
@@ -24,7 +24,7 @@
 @synthesize rootUrl;
 @synthesize rootRequest;
 @synthesize viewDidLoadBlock;
-
+@synthesize webViewLoadErrorBlock;
 
 - (instancetype)initWithDic:(NSDictionary *)dic {
     if (self = [super init]) {
@@ -118,7 +118,10 @@
     if([error code] == NSURLErrorCancelled)  {
         return;
     }
-    if (error) {
+    NSLog(@"PoporWKWebVC error : %@", error.localizedDescription);
+    if (self.webViewLoadErrorBlock) {
+        self.webViewLoadErrorBlock(error);
+    } else if (error) {
         AlertToastTitleTime(error.localizedDescription, 2);
     }
 }

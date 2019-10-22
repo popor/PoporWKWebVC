@@ -25,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSMutableURLRequest * rootRequest;
 @property (nonatomic, copy  ) void (^viewDidLoadBlock)(PoporWKWebVC *webVC);
 
+// 假如设置了,就不再弹出默认的吐司.
+@property (nonatomic, copy  ) void (^webViewLoadErrorBlock)(NSError *error);
+
 @end
 
 // MARK: 数据来源
